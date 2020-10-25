@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/tool_bar"
+            android:layout_width="409dp"
+            android:layout_height="301dp"
+            android:contentDescription="contdesc"
+            android:src="@drawable/news1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="condesc"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#fff"
+            android:layout_marginLeft="16dp" />
+
+        <ImageView
+            android:id="@+id/btn_size"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="264dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="condesc"
+            android:src="@drawable/ic_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#fff"
+            android:layout_marginLeft="264dp" />
+
+        <ImageView
+            android:id="@+id/btn_share"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="312dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="condesc"
+            android:src="@drawable/share"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#fff"
+            android:layout_marginLeft="312dp" />
+
+        <ImageView
+            android:id="@+id/btn_star"
+            android:layout_width="31dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="364dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="condesc"
+            android:src="@drawable/ic_star"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#fff"
+            android:layout_marginLeft="364dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/scv_news"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintStart_toStartOf="@id/lay_header"
+        app:layout_constraintTop_toBottomOf="@id/lay_header"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_foto_deskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="10sp"
+                android:text="Foto Deskripsi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/tv_dtk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                android:text="Detik.com"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_foto_deskripsi"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/tv_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Judul Berita"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#222"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_dtk"
+                android:layout_marginLeft="16dp" />
+            <View
+                android:id="@+id/v_line"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="#5e5e5e"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_judul"/>
+
+            <TextView
+                android:id="@+id/tv_lansir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="10sp"
+                android:text="Sumber: narasumber (Umar)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v_line"
+                android:layout_marginLeft="16dp" />
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="10sp"
+                android:text="Ahad, 4 Oktober 2020"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_lansir"
+                android:layout_marginLeft="16dp" />
+
+            <TextView
+                android:id="@+id/tv_desc_detail"
+                android:padding="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:textSize="12sp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, ex obcaecati quod commodi sit id sunt rem aliquam distinctio. Eum doloribus reiciendis excepturi commodi? Quas sed consequuntur aliquid tempora cupiditate, asperiores excepturi ipsam reiciendis at esse incidunt earum deleniti in aut pariatur culpa accusantium obcaecati sunt placeat eum quos laudantium.Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum dolore ullam neque tempora laborum similique hic a veniam quasi impedit distinctio accusamus eius velit necessitatibus cumque enim ad temporibus ex illo, laudantium quae. Laborum omnis illum doloribus perferendis cumque, adipisci mollitia, explicabo fugiat iusto quia excepturi aspernatur velit quod quam quasi et illo esse eaque odit natus quas. Dolorem voluptatem dicta veritatis, vero consectetur laboriosam facilis. Ipsum deserunt ad sunt nesciunt, hic delectus, atque eum culpa quisquam ratione quaerat id minima alias. Repellat labore unde mollitia! Quisquam velit voluptatem vel. Dignissimos quod ab perferendis impedit, maxime repudiandae iusto tempora, quisquam mollitia nisi dolor eos quidem repellendus obcaecati ullam pariatur! A fugiat earum quae id autem officiis suscipit est, harum adipisci voluptates recusandae quidem officia asperiores tempora, doloribus, quam voluptas odit! Id aperiam debitis architecto minus. Reiciendis ipsam distinctio excepturi fugit earum illo aliquid voluptate nulla dolore. Quam magnam temporibus quae mollitia eveniet laborum quia dignissimos consequuntur eligendi! Praesentium labore non rem autem ipsum totam rerum officiis assumenda, exercitationem in delectus voluptate quod, quis sint obcaecati nesciunt, alias ratione placeat nihil dolore expedita nemo consectetur culpa deserunt. Nostrum molestias quaerat fugit blanditiis atque iste dolorum quas soluta nam. Eveniet soluta itaque non, error cum dolorum ipsa, laboriosam quis nulla sint tenetur? Non quis eum illo possimus rem, magni omnis cupiditate rerum natus, facilis, est nemo perspiciatis dicta voluptates ut hic corrupti placeat. Beatae itaque facilis quibusdam natus nihil error, libero praesentium numquam repudiandae iste dolore asperiores rerum cupiditate accusamus a. Accusamus debitis similique odit ducimus dignissimos id autem aut quia, reiciendis incidunt illum amet praesentium cum, modi possimus laborum laudantium voluptatum qui veniam fugiat nihil. Vitae, dicta et consequuntur minima, commodi mollitia consequatur corrupti maiores, eos officia dolore. Velit eos, voluptate reiciendis similique, suscipit soluta aut doloremque at harum quidem sequi delectus, blanditiis praesentium illo. Ad adipisci dolores quisquam recusandae quis laudantium laborum asperiores voluptas similique, quam deleniti officia reiciendis at aliquam delectus veniam tempore illum ipsa deserunt voluptatem perferendis natus porro. Explicabo hic, commodi ipsa voluptatibus iste distinctio velit iusto ipsum earum, laborum obcaecati voluptate quibusdam assumenda. Quas non est adipisci, expedita temporibus, vel, minus consequuntur necessitatibus mollitia at distinctio. Reprehenderit aut, voluptatem vitae totam iure culpa accusantium qui distinctio officia praesentium autem rerum voluptate. Doloribus sapiente maxime tempore qui nam minima voluptates praesentium voluptatum alias quod perspiciatis et similique mollitia natus facere sequi fugiat optio officia sit maiores odio facilis tenetur, saepe ullam! Eligendi sed aliquid delectus sit blanditiis cupiditate odit corporis animi, vitae obcaecati natus corrupti error mollitia ipsam porro quo. Ullam amet tenetur nemo sed vero aspernatur iusto, magni illum consequatur fuga aliquid nam, dolor incidunt, a quasi et earum quae perferendis modi perspiciatis expedita ad aliquam impedit ratione. Aperiam, itaque iusto numquam consectetur exercitationem ea pariatur sequi sapiente saepe veniam, fuga quis odit corporis facilis, dolorum voluptatibus? Laborum aliquam voluptatibus id, quaerat saepe repellendus, architecto tempore molestias dicta quas cupiditate sapiente quam tempora beatae ad. Perspiciatis, voluptatum? Delectus natus unde rem, accusamus dicta ex repellendus reiciendis possimus nisi corporis neque officia distinctio hic itaque veritatis numquam atque harum voluptatem quidem dolores animi? Repellendus, adipisci sint sunt excepturi, eius quae nam eligendi laudantium rerum beatae eveniet doloribus eum repellat dicta. Quidem unde incidunt voluptate culpa, blanditiis delectus vitae consequuntur dolorem. Magni amet earum eum dicta eligendi perspiciatis reiciendis molestiae asperiores non soluta, odio deleniti porro minus natus in voluptatum fugit? Hic pariatur et delectus velit necessitatibus laboriosam maiores dolore voluptatum vitae voluptate quas enim ab natus laudantium illum repudiandae cum qui, esse sequi similique debitis odit deserunt! Officia, harum dicta. Obcaecati cupiditate at distinctio facilis placeat ipsa id doloribus odio velit consectetur minima, nobis earum sunt exercitationem ipsum laborum nostrum eos quis? Corporis illo libero quos quasi iure, optio aperiam voluptates qui magni atque, laborum quam minus sunt suscipit in! Illum laboriosam praesentium ex magni nam, a omnis, aperiam aliquid sed doloribus nemo ut ab accusantium dolor cum eveniet non perferendis? Repellat, modi vero? Veritatis minus quae eius laborum! Saepe, deleniti! Debitis, quaerat quod. Laborum saepe officiis tempora atque laboriosam fugiat aliquid ullam quae qui! Dolore suscipit possimus architecto ipsum necessitatibus libero magni laborum neque, iste inventore voluptates eius, enim, alias rem exercitationem in qui quasi dicta quam deleniti recusandae! Minima minus ea tenetur cupiditate, blanditiis architecto fugit excepturi, iusto impedit, explicabo veniam unde id nam odio ratione non maxime hic? Eius, earum consequuntur quisquam excepturi ipsam culpa fugit voluptas quaerat autem recusandae architecto voluptate inventore. Tempore eaque labore a debitis! Cupiditate itaque in soluta error molestias odit. Alias amet impedit corrupti, itaque eveniet iste quaerat assumenda sint dolorem sapiente repudiandae ipsum natus quidem rerum eos perspiciatis aut hic dolorum voluptatibus! Modi alias perspiciatis ratione deleniti velit corporis voluptates assumenda fugiat nam quibusdam eaque adipisci in, non neque culpa? Animi saepe quas odio facere. Corrupti obcaecati consectetur voluptatum. Mollitia, quasi neque. Explicabo temporibus sint qui, id vero doloremque repellendus illum. Voluptate velit aliquam quia magni blanditiis a facere itaque aut suscipit, doloremque pariatur laudantium veniam eligendi necessitatibus quaerat nostrum! Omnis maiores dignissimos mollitia ratione iste sapiente eos aspernatur repudiandae delectus soluta quae eligendi nesciunt, non a iusto error ea. Quidem deleniti rem saepe a odit dolor. Necessitatibus saepe eos rem aliquam earum quis odit, perferendis a dolore in libero omnis, voluptatem optio corrupti reprehenderit quibusdam ducimus, iusto ipsum accusamus dicta laborum? Ipsam nihil in at suscipit accusantium. Rerum incidunt assumenda ducimus aliquid pariatur ab amet, molestiae rem? Deleniti sequi temporibus architecto ipsam! Porro itaque ullam eius atque rem placeat cumque fugiat debitis saepe. Repellat quam mollitia ad doloremque nisi ipsam beatae, facilis culpa blanditiis nobis earum, praesentium amet provident debitis ex, architecto ipsa in? Nam velit ad dolorem blanditiis alias rem quis modi iure, cum quaerat earum tempora assumenda voluptatum aperiam quasi eos omnis nesciunt, eius qui ab laborum, optio culpa autem enim. Totam officiis dicta tempore illum esse adipisci? Dicta esse tenetur maiores nihil neque nesciunt ad quae nobis asperiores repellendus! Placeat ratione rerum quo a odit, sapiente magnam. Asperiores placeat magnam sapiente corrupti ul"
+                android:textColor="#222"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_lansir"
+                android:layout_marginLeft="16dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
